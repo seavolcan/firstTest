@@ -1,0 +1,22 @@
+
+function setup(){
+	
+	loadJSON('http://free.currencyconverterapi.com/api/v5/convert?q=EUR_USD&compact=y', gotData);
+		
+}
+
+function gotData(data){
+	var para= document.getElementById('para');
+	/* var azn= data.rates.AFN;
+	var tzn= data.rates.AED; */
+	var obj = data.EUR_USD.val;
+	
+	//para.innerHTML = mad + '<br>' +'ISK'+' '+azn +'<br>' +'BTC'+' '+ tzn;
+	para.innerHTML = /* tzn +'<br>'+ azn */ obj;
+
+}
+
+function draw(){
+	
+	
+}
